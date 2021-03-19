@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Temperature(temp){
+        if (temp >= -273){
+            this.temp = temp;
+        }
+        this.convertToF = function(){
+            return (32+this.temp*9/5);
+        }
+        this.convertToK = function(){
+            return (this.temp + 273);
+        }
+    }
+    let t = new Temperature(25);
+    alert('Convert to F: '+ t.convertToF()+'; Convert to K: '+ t.convertToK());
+
+</script>
